@@ -1,14 +1,19 @@
-# MyApp
+
+# Angular Restaurant Application with Firebase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
+# [LIVE DEMO](https://angular-project-24d56.firebaseapp.com/)
+
+## Getting Started
+
+Make sure you have Node js installed and Angular CLI installed globally, then run npm install to resolve all dependencies (might take a few minutes).
+
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng serve` for a dev server or `ng serve -o` to open in browser. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Then sign up in the application and you are good to go.
 
 ## Build
 
