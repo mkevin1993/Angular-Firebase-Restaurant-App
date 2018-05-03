@@ -1,0 +1,15 @@
+<div class="log_in_container" *ngIf="!cps.user_logged_in">
+<app-sign-up-toolbar ></app-sign-up-toolbar>
+<app-log-in   *ngIf="!cps.show_sign_up_panel"></app-log-in>
+<app-sign-up  *ngIf="cps.show_sign_up_panel"></app-sign-up>
+<app-footer ></app-footer>
+</div>
+
+<div class="container" *ngIf="cps.user_logged_in">
+<app-main-toolbar></app-main-toolbar>
+<div fxLayout="row" class="main_outer">
+<app-main-left fxFlex="17.5"></app-main-left>
+<app-main-center fxFlex="65"></app-main-center>
+<app-main-right fxFlex="17.5"></app-main-right>
+</div>
+</div>

@@ -1,0 +1,104 @@
+$roboto: Roboto,"Helvetica Neue",sans-serif;
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+.upper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 17%;
+    width: 100%;
+    padding:5px;
+}
+
+.upper > mat-card{
+    margin: 5px;
+}
+
+.lower{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    width: 100%;
+    flex: 83%;
+}
+
+mat-card mat-card-content{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+mat-card{
+    padding: 0px;
+    margin: 0px;
+}
+
+.lower app-food-card {
+    width: 16%;
+    background-color: red;
+}
+
+.table_no{
+  display: flex;
+  flex:1 1 auto;
+  background-color: #228b22b0;
+  color: white;
+
+}
+
+.big_text{
+    font-family: $roboto;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.small_text{
+    font-family: $roboto;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.step_no{
+    display: flex;
+    flex:1 1 auto;
+    background-color: #FF1493b0;
+    color: white;
+}
+
+.next_meal{
+    display: flex;
+    flex:1 1 auto;
+    background-color: #9400D3b0;
+    color: white;
+
+}
+
+.orders{
+    display: flex;
+    flex:1 1 auto;
+    background-color: #007fff;
+    color: white;
+
+}
+
+.order_active{
+    background-color: #FF1493b0;
+}
+

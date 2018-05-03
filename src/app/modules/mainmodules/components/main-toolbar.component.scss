@@ -1,0 +1,41 @@
+$grey: #696969;
+$roboto: Roboto,"Helvetica Neue",sans-serif;
+
+mat-toolbar{
+    width:100%;
+    height: 40px;
+    background-color: #007fff;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    justify-content: space-between;
+    width: 4%;
+
+}
+
+.name{
+font-family: $roboto;
+font-weight: 700;
+font-size: 20px;
+color: white;
+}
+
+
+.today{
+    font-family: $roboto;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+}

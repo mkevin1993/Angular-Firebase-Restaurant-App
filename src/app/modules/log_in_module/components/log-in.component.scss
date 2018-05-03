@@ -1,0 +1,52 @@
+$grey: #696969;
+$roboto: Roboto,"Helvetica Neue",sans-serif;
+
+@mixin flex_column_end(){
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.mat-card {
+    text-align: -webkit-center;
+}
+
+table{
+    width: 100%;
+}
+.full-width {
+    width: 100%;
+}
+
+mat-card {
+    max-width: 30%;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.grey_text{
+    font-size: 12px;
+    color: $grey;
+}
+
+mat-error{
+    font-size: 12px;
+}
+
+.gender{
+    font-weight: 500;
+    font-size: 12px;
+}
+
+mat-card-title{
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+mat-card-subtitle{
+    text-align: left;
+    color: $grey;
+    font-size: 12px;
+}

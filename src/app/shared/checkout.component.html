@@ -1,0 +1,40 @@
+<mat-dialog-content >
+
+       <div class="container">
+
+        <div class="title" mat-dialog-title >CheckOut</div>
+        <div class="inner_container">
+            <div class="total">
+                <div class="amount_title">Total Amount</div>
+                <div class="amount">KES {{amount}}</div>
+
+
+            </div>
+            <div class="payment_methods">
+                <div class="payment_forms" (click)="selectCash()" [ngClass]="{'payment_selectted': cash === true}">
+                        <i class="fas fa-money-bill-alt"></i>
+                        <p>Cash</p>
+                </div>
+                <div class="payment_forms" (click)="selectCC()" [ngClass]="{'payment_selectted': card === true}">
+                        <i class="fas fa-credit-card"></i>
+                        <p>Credit card</p>
+                </div>
+                <div class="payment_forms" (click)="selectPP()" [ngClass]="{'payment_selectted': paypal === true}">
+                        <i class="fab fa-cc-paypal"></i>
+                        <p>Paypal</p>
+                </div>
+                <div class="payment_forms" (click)="selectAP()" [ngClass]="{'payment_selectted': apple_pay === true}">
+                        <i class="fab fa-apple-pay"></i>
+                        <p>Apple Pay</p>
+                </div>
+
+            </div>
+        </div>
+       </div>
+
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button mat-raised-button color="accent" matDialogClose (click)="confirmPayment()">Pay Now</button>
+        <button mat-raised-button color="primary" matDialogClose >Close</button>
+    </mat-dialog-actions>

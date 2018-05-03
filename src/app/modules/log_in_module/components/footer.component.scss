@@ -1,0 +1,23 @@
+$roboto: Roboto,"Helvetica Neue",sans-serif;
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    font-family: $roboto;
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+.copyright,.rights,span{
+    font-size: 11px;
+}
+
+.footer_name{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: karla;
+}

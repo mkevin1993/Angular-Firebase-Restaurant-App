@@ -1,0 +1,27 @@
+mat-dialog-content{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 400px;
+      height: 400px;
+      flex-direction: column;
+  }
+
+  mat-dialog-actions{
+      justify-content: center;
+  }
+
+  .msg{
+      font-family: Roboto, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 20px;
+  }
+
+  .error{
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+  }

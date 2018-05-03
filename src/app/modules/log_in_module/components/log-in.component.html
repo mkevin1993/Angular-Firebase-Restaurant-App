@@ -1,0 +1,60 @@
+
+    <mat-card>
+
+        <mat-card-title>
+        Log in
+        </mat-card-title>
+        <mat-card-subtitle>
+        Log into your account.
+        </mat-card-subtitle>
+
+        <mat-card-content>
+            <form [formGroup]='loginForm' (ngSubmit)="OnSubmit(loginForm)">
+                <table>
+
+                    <tr>
+                        <td colspan="2">
+                        <mat-form-field class="full-width">
+                        <input matInput formControlName='email' name="email" id="email" placeholder="Email" required>
+                        </mat-form-field>
+                        <div *ngIf="loginForm.controls['email'].touched && !loginForm.controls['email'].valid">
+                        <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+                        Email Id is required
+                        </mat-error>
+                        <mat-error *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">
+                        Invalid Email
+                        </mat-error>
+                        </div>
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td colspan="2">
+                        <mat-form-field class="full-width">
+                        <input matInput type="password" formControlName='password' name="password" id="password" placeholder="password"  required>
+                        </mat-form-field>
+                        <div *ngIf="loginForm.controls['password'].touched && !loginForm.controls['password'].valid">
+
+                        <mat-error *ngIf="loginForm.controls['password'].hasError('minlenght')" >
+                        Password should be atleast 8 characters
+                        </mat-error>
+                        <mat-error *ngIf="loginForm.controls['password'].hasError('maxlenght')">
+                        Password is too long!
+                        </mat-error>
+                        <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+                        Password is required
+                        </mat-error>
+                        </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="text-align: right" class="content-right">
+                            <button mat-raised-button [disabled]="!loginForm.valid" color="accent">Log In</button>
+
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </mat-card-content>
+    </mat-card>

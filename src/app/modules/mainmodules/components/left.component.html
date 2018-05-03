@@ -1,0 +1,110 @@
+
+<mat-card>
+    <mat-card-content>
+        <div class="container" >
+            <div class="user_img_name">
+            <div class="user">
+            <img src="../../../../assets/user_default.jpg" alt="user_img">
+            </div>
+            <div class="user_name">{{this.cps.currentCustomer.FirstName}} {{this.cps.currentCustomer.LastName}}</div>
+            </div>
+            <div class="user_details"><span class="solid">Email</span> {{ this.cps.currentCustomer.Email}}</div>
+            <div class="user_details"><span class="solid">Gender</span> {{ this.cps.currentCustomer.Gender}}</div>
+
+        </div>
+
+        <div class="edit" >
+        <mat-icon>edit</mat-icon><span>Edit Profile</span>
+        </div>
+        <div class="next_steps" >
+
+        <div class="n_step reserve_step" [ngClass]="{'step_completed': reservation_step_done === true }">
+            <div id="step_pos" class="pos" [ngClass]="{'step_completed_background': reservation_step_done === true }">
+            1
+            </div>
+            <div class="step_center">
+            <p id="step">Confirm Reservation</p>
+            <p id="time">{{reservation_step_time}}</p>
+            </div>
+            <div class="done">
+            <mat-icon>check</mat-icon>
+
+            </div>
+        </div>
+        <div class="divide wine_step" [ngClass]="{'step_completed_background': wine_step_done === true }" ></div>
+        <div class="n_step wine_step" [ngClass]="{'step_completed': wine_step_done === true }">
+            <div id="step_pos" class="pos" [ngClass]="{'step_completed_background': wine_step_done === true }">
+            2
+            </div>
+            <div class="step_center">
+            <p id="step">Order Wine</p>
+            <p id="time">{{this.wine_step_time}}</p>
+            </div>
+            <div class="done">
+            <mat-icon>check</mat-icon>
+
+            </div>
+        </div>
+        <div class="divide starters_step" [ngClass]="{'step_completed_background': starters_step_done === true }"></div>
+        <div  class="n_step starters_step" [ngClass]="{'step_completed': starters_step_done === true }">
+            <div id="step_pos" class="pos" [ngClass]="{'step_completed_background': starters_step_done === true }">
+            3
+            </div>
+            <div class="step_center">
+            <p id="step">Order Starters</p>
+            <p id="time">{{starters_step_time}}</p>
+            </div>
+            <div class="done">
+            <mat-icon>check</mat-icon>
+
+            </div>
+        </div>
+        <div class="divide main_step" [ngClass]="{'step_completed_background': main_step_done === true }"></div>
+        <div class="n_step main_step" [ngClass]="{'step_completed': main_step_done === true }">
+            <div id="step_pos" class="pos" [ngClass]="{'step_completed_background': main_step_done === true }">
+            4
+            </div>
+            <div class="step_center">
+            <p id="step">Order Main Course</p>
+            <p id="time">{{main_step_time}}</p>
+            </div>
+            <div class="done">
+            <mat-icon>check</mat-icon>
+
+            </div>
+        </div>
+        <div class="divide desserts_step"  [ngClass]="{'step_completed_background': dessert_step_done === true }"></div>
+        <div class="n_step desserts_step" [ngClass]="{'step_completed': dessert_step_done === true }">
+            <div id="step_pos" class="pos" [ngClass]="{'step_completed_background': dessert_step_done === true }">
+            5
+            </div>
+            <div class="step_center">
+            <p id="step"> Order Desserts</p>
+            <p id="time">{{dessert_step_time}}</p>
+            </div>
+            <div class="done">
+            <mat-icon>check</mat-icon>
+
+            </div>
+        </div>
+        <div class="divide checkout_step" [ngClass]="{'step_completed_background': checkout_step_done === true }"></div>
+        <div class="n_step checkout_step" [ngClass]="{'step_completed': checkout_step_done === true }">
+            <div id="step_pos" class="pos" [ngClass]="{'step_completed_background': checkout_step_done === true }">
+            6
+            </div>
+            <div class="step_center">
+            <p id="step">Checkout</p>
+            <p id="time">{{checkout_step_time}}</p>
+            </div>
+            <div class="done">
+            <mat-icon>check</mat-icon>
+
+            </div>
+        </div>
+
+        </div>
+        <div id="no_use">
+
+        </div>
+    </mat-card-content>
+</mat-card>

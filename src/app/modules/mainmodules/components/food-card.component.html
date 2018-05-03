@@ -1,0 +1,21 @@
+<mat-card >
+    <mat-card-content>
+    <div class ="card-image">
+     <img src={{type.image}} alt="" >
+    </div>
+    <p class="food-title">{{type.name}}</p>
+
+    <p class="food-cost">KES {{type.value}}</p>
+
+    <div  (click)="foodOrder()">
+        <div class="order_food" *ngIf="!type.selected">
+               Select
+        </div>
+
+        <div class="order_selected" *ngIf="type.selected">
+               Select
+        </div>
+    </div>
+
+</mat-card-content>
+</mat-card>

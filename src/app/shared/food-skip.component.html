@@ -1,0 +1,11 @@
+<mat-dialog-content >
+
+    <p class="msg">Do you want to skip {{meal}} ?</p>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button  mat-raised-button  color="primary"  (click)="closeAndOrderNext()" matDialogClose>Yes Please</button>
+    <button  mat-raised-button  color="accent" matDialogClose >Cancel</button>
+</mat-dialog-actions>

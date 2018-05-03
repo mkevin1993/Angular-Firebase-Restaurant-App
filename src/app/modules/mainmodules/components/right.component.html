@@ -1,0 +1,33 @@
+<div class="container">
+<mat-card class="upper-mat">
+    <mat-card-content class="checkout">
+        <div class="big_text">
+            Check Out
+        </div>
+        <div class="small_text">
+            Your Orders:
+
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="center-mat" >
+
+    <mat-card-content class="food_container">
+    <ng-container  #foodOrderContainer></ng-container>
+    </mat-card-content>
+
+
+</mat-card>
+
+<mat-card class="lower-mat" >
+    <mat-card-content class="total">
+        <div class="big_text">
+            TOTAL
+        </div>
+        <div class="total_text">
+            KES {{food_sum}}
+        </div>
+    </mat-card-content>
+</mat-card>
+</div>

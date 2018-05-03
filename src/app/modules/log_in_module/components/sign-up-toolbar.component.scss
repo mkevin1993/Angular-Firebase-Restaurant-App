@@ -1,0 +1,61 @@
+$grey: #696969;
+$roboto: Roboto,"Helvetica Neue",sans-serif;
+@mixin flex_column_end(){
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.sign_up{
+
+    font-family: $roboto;
+    background-color: #FF1493;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 12px;
+    color: white;
+    /* padding: 5px; */
+    margin-top: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.log_in{
+    font-family: $roboto;
+    background-color: #007fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 12px;
+    color: white;
+    /* padding: 5px; */
+    margin-top: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 15px;
+    padding-right: 12px;
+    margin-right: 10px;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.toolbar_right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15%;
+}
+
+.appp_name{
+    color: white;
+    font-size: 20px;
+    font-family: $roboto;
+    font-weight: 700;
+    margin-left: 10px;
+}

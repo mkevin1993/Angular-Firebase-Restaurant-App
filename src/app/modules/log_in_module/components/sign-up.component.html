@@ -1,0 +1,120 @@
+<mat-card>
+
+    <mat-card-title>
+    Register
+    </mat-card-title>
+    <mat-card-subtitle>
+    Sign up for a new account.
+    </mat-card-subtitle>
+
+    <mat-card-content>
+        <form [formGroup]='signupForm' (ngSubmit)="OnSubmit(signupForm)">
+            <table>
+                <tr>
+                    <td>
+                        <mat-form-field class="full-width">
+                        <input matInput formControlName='firstname' name="firstname" id="firstname" placeholder="First Name" required >
+                        </mat-form-field>
+                        <div *ngIf="signupForm.controls['firstname'].touched && !signupForm.controls['firstname'].valid">
+                        <mat-error *ngIf="signupForm.controls['firstname'].hasError('required') ">
+                        First name is required
+                        </mat-error>
+                        </div>
+                    </td>
+                    <td>
+                        <mat-form-field class="full-width">
+                        <input matInput formControlName='lastname' name="lastname" id="lastname" placeholder="Last Name" required>
+                        </mat-form-field>
+                        <div *ngIf="signupForm.controls['lastname'].touched && !signupForm.controls['lastname'].valid">
+                        <mat-error *ngIf="signupForm.controls['lastname'].hasError('required') ">
+                        Last name is required
+                        </mat-error>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                        <td colspan="2">
+                        <mat-form-field class="full-width">
+                        <input matInput formControlName='email' name="email" id="email" placeholder="Email" required>
+                        </mat-form-field>
+                        <div *ngIf="signupForm.controls['email'].touched && !signupForm.controls['email'].valid">
+                        <mat-error *ngIf="signupForm.controls['email'].hasError('required')">
+                        Email Id is required
+                        </mat-error>
+                        <mat-error *ngIf="signupForm.controls['email'].hasError('email') && !signupForm.controls['email'].hasError('required')">
+                        Invalid Email
+                        </mat-error>
+                        </div>
+                        </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <mat-form-field class="full-width">
+                        <input matInput type="password" formControlName='password' name="password" id="password" placeholder="password"  required>
+                        </mat-form-field>
+                        <div *ngIf="signupForm.controls['password'].touched && !signupForm.controls['password'].valid">
+
+                        <mat-error *ngIf="signupForm.controls['password'].hasError('minlenght')" >
+                        Password should be atleast 8 characters
+                        </mat-error>
+                        <mat-error *ngIf="signupForm.controls['password'].hasError('maxlenght')">
+                        Password is too long!
+                        </mat-error>
+                        <mat-error *ngIf="signupForm.controls['password'].hasError('required')">
+                        Password is required
+                        </mat-error>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <mat-form-field class="full-width">
+                            <textarea matInput formControlName='address' placeholder="Address" matTextareaAutosize
+                             matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
+
+                        </mat-form-field>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <span class="gender">Gender</span><br><br>
+                        <mat-radio-group  formControlName='gender' >
+                        <mat-radio-button   value="male">Male</mat-radio-button>
+                        <mat-radio-button   value="female">Female</mat-radio-button>
+                        </mat-radio-group>
+                    </td>
+                    <td><br>
+                        <mat-form-field>
+                        <input matInput formControlName='phonenumber' name="phonenumber" id="phonenumber" placeholder="Phone Number">
+                        </mat-form-field>
+                        <div *ngIf="signupForm.controls['phonenumber'].touched && !signupForm.controls['phonenumber'].valid">
+                        <mat-error *ngIf="signupForm.controls['phonenumber'].hasError('maxlength')">
+                        Invalid Phone Number
+                        </mat-error>
+                        </div>
+                    </td>
+                </tr>
+                <br>
+
+                <tr>
+                    <td colspan="2">
+
+                    <mat-checkbox  formControlName="termsaccepted" name="termsaccepted" id="termsaccepted" value="false" #tc></mat-checkbox>
+
+                    <span class="grey_text">I have read and accepted the terms & conditions.</span>
+                    <br><br>
+                    <mat-error align="start" *ngIf="!tc.checked">You have to accept the terms and conditions</mat-error>
+                    </td>
+                </tr> <br>
+                <tr>
+                    <td colspan="2" style="text-align: right" class="content-right">
+                        <button mat-raised-button [disabled]="!signupForm.valid" color="accent">Sign Up</button>
+                        <button mat-raised-button (click) = "resetForm(signupForm)" color="accent">Clear</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </mat-card-content>
+</mat-card>
