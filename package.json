@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "author": "kevin machana",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
